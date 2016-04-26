@@ -1,9 +1,13 @@
 package dataStructures;
 
+import java.util.Arrays;
+
 public class BinaryTreeBalanced_Opt {
 
 	
 	public boolean IsBalanced_Opt(TreeNode root){
+		
+		
 		
 		if(root==null)return false;
 		
@@ -64,7 +68,6 @@ public class BinaryTreeBalanced_Opt {
 		roots6.rightTree = null;
 		root7.leftTree = null;
 		root7.rightTree = root8;
-		
 		BinaryTreeBalanced_Opt obj = new BinaryTreeBalanced_Opt();
 		System.out.println(obj.IsBalanced_Opt(roots));
 		System.out.println(System.nanoTime()-now);

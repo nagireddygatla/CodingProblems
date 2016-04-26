@@ -7,13 +7,13 @@ The minimum depth is the number of nodes along the shortest path from the root n
 public class BinaryTree_MinimumDepth {
 
 	   public int minDepth(TreeNode root) {
+		   
 		    if (root == null) { return 0;}
-	        if(root.leftTree != null & root.rightTree != null){
-		    return 1 + Math.min(minDepth(root.leftTree), minDepth(root.rightTree));
-	        }
-	        else{
-	        	return 1 + Math.max(minDepth(root.leftTree),minDepth(root.rightTree));
-	        }
+	        if(root.leftTree==null && root.rightTree==null)return 1;
+	        int leftDepth = root!=null?minDepth(root.leftTree):Integer.MAX_VALUE;
+	        int rightDepth = root!=null?minDepth(root.rightTree):Integer.MAX_VALUE;
+	        
+	        return 1+Math.min(leftDepth, rightDepth);
 	}
 	   
 	public static void main(String [] args){

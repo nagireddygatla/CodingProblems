@@ -29,4 +29,18 @@ public class WordSearch {
 	    }
 	    return false;
 	}
+	
+	
+	public static void main(String [] args){
+		WordSearch ws = new WordSearch();
+		char [][] board = {
+		                   {'A','B','C','E'},
+		                   {'S','F','C','S'},
+		                   {'A','D','E','E'}
+							};
+		String word = "ABCCED";
+		System.out.println(ws.method(board, word));
+		
+		
+	}
 	}

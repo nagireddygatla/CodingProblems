@@ -16,7 +16,8 @@ After third round, the three bulbs are [on, off, off].
 
 So you should return 1, because there is only one bulb is on.*/
 
-//Easiest solution to bulb switcher is to return (int) Math.sqrt(n)
+//Easiest solution to bulb switcher is to return (int) Math.sqrt(n) - trick is all numbers will have even factors only perfect
+//squares have odd factors, so for perfect squares bulb final state would be ON, so to find perfect squares-Math.sqrt(n) 
 public class BulbSwitcher {
 	
 public int bulbSwitch(int n) {

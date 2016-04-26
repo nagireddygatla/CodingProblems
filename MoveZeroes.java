@@ -32,10 +32,11 @@ public class MoveZeroes {
         
     }
 	public static void main(String [] args){
-		int [] nums = {0,1,3,4,0,9};
 		
+		int [] nums = {0,1,3,4,0,9};
 		MoveZeroes obj = new MoveZeroes();
 		obj.moveZeroes(nums);
+		
 	}
 
 }

@@ -1,4 +1,4 @@
-package dataStructures;
+package basicAlgorithms;
 
 import java.util.*;
 
@@ -11,51 +11,61 @@ public class MergeSort
 		System.out.println(Arrays.toString(a));
 	}
 
-	public static void mergeSort(Comparable [ ] a)
-	{
-		Comparable[] tmp = new Comparable[a.length];
-		mergeSort(a, tmp,  0,  a.length - 1);
+	private static void mergeSort(Comparable[] a) {
+		
+		Comparable [] temp = new Comparable[a.length];
+		mergeSort(a,temp,0,a.length-1);
 	}
 
-
-	private static void mergeSort(Comparable [ ] a, Comparable [ ] tmp, int left, int right)
-	{
-		if( left < right )
-		{
-			int center = (left + right) / 2;
-			//System.out.println("this is the left:"+left);
-			//System.out.println("this is the left:"+right);
-			mergeSort(a, tmp, left, center);
-			mergeSort(a, tmp, center + 1, right);
-			merge(a, tmp, left, center + 1, right);
+	private static void mergeSort(Comparable[] a, Comparable[] temp, int left,
+			int right) {
+		
+		if(left<right){
+			
+			int center = (left + right)/2;
+			mergeSort(a,temp,left,center);
+			mergeSort(a,temp,center+1,right);
+			merge(a,temp,left,center+1,right);
+			
+			
+			
 		}
+		
+		
 	}
 
+	private static void merge(Comparable[] a, Comparable[] temp, int left,
+			int right, int rightend) {
+		
+		int leftend = right -1;
+		int k = left;
+		System.out.println(k);
+		int nums = rightend - left + 1;
+		
+		while(left <= leftend && right <= rightend){
+		
+			if(a[left].compareTo(a[right])<=0){	
+			temp[k++] =	a[left++];
+			}
+			else{
+				temp[k++] = a[right++];
+			}
+		}
+		
+		while(left<=leftend){
+			temp[k++] = a[left++];
+		}
+		
+		while(right<=rightend){
+			temp[k++] = a[right++];
+		}
+		
+		for(int i = 0;i<nums;i++,rightend--){
+			a[rightend] = temp[rightend];
+		}
+		
+	}
 
-    private static void merge(Comparable[ ] a, Comparable[ ] tmp, int left, int right, int rightEnd ) 
-    {
-    	
-    	//System.out.println(Arrays.toString(a));
-    	System.out.println(Arrays.toString(tmp));
-        int leftEnd = right - 1;
-        int k = left;
-        int num = rightEnd - left + 1;
-
-        while(left <= leftEnd && right <= rightEnd)
-            if(a[left].compareTo(a[right]) <= 0)
-                tmp[k++] = a[left++];
-            else
-                tmp[k++] = a[right++];
-
-        while(left <= leftEnd)    // Copy rest of first half
-            tmp[k++] = a[left++];
-
-        while(right <= rightEnd)  // Copy rest of right half
-            tmp[k++] = a[right++];
-
-        // Copy tmp back
-        for(int i = 0; i < num; i++, rightEnd--)
-            a[rightEnd] = tmp[rightEnd];
-    }
+	
  }
 

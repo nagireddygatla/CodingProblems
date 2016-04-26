@@ -1,8 +1,7 @@
 package dataStructures;
 
-import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.List;
+
 
 
 /*Given an array of integers, find two numbers such that they add up to a specific target number.

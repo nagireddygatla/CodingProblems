@@ -2,10 +2,6 @@ package dataStructures;
 
 public class ConceptQueue {
 	
-	
-
-	
-	
 	public static void main(String [] args){
 		
 		QueueNode first = new QueueNode(2);

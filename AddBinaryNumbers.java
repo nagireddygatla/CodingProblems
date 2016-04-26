@@ -1,10 +1,7 @@
 package dataStructures;
 
 public class AddBinaryNumbers {
-	
-	
 
-	
 	static String addBinary(String first, String second){
 		
 		int firLength = first.length();

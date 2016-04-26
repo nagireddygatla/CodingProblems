@@ -9,6 +9,7 @@ public class FormLargestNumber implements Comparator<Integer> {
         String s1 = o1.toString();
         String s2 = o2.toString();
         return (s2+s1).compareTo(s1+s2);
+        
     }
 
     public static void main(String[] args) {

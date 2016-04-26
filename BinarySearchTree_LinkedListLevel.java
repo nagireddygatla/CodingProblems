@@ -14,7 +14,7 @@ public class BinarySearchTree_LinkedListLevel {
 		current.add(root);
 		}
 		
-		if(current.size()>0){
+		while(current.size()>0){
 			result.add(current);
 			LinkedList<TreeNode> parents = current;
 			current = new LinkedList<TreeNode>();
@@ -22,12 +22,11 @@ public class BinarySearchTree_LinkedListLevel {
 				if(parent.leftTree!=null){
 					current.add(parent.leftTree);
 				}
-				
-				if(parent.rightTree!=null){	
+				if(parent.rightTree!=null){
 					current.add(parent.rightTree);
-				}	
-			}	
-		}	
+				}
+			}
+		}
 		return result;
 	}
 }

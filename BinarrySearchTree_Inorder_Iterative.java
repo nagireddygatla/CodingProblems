@@ -7,7 +7,6 @@ public class BinarrySearchTree_Inorder_Iterative {
 	public static List<Integer> inorderTraversal(TreeNode root){
 		List<Integer> list = new ArrayList<Integer>();
 		Stack<TreeNode> stack = new Stack<TreeNode>();
-		
 		while(root!=null){
 			stack.push(root);
 			root = root.leftTree;
@@ -16,33 +15,28 @@ public class BinarrySearchTree_Inorder_Iterative {
 				root = stack.pop();
 				list.add(root.val);
 				root = root.rightTree;
-			}	
+			}
 		}
 		return list;
 	}
-	
 	
 	public static List<Integer> preorderTraversal(TreeNode root){
 		List<Integer> list = new ArrayList<Integer>();
 		Stack<TreeNode> stack = new Stack<TreeNode>();
-		
 		while(root!=null){
 			list.add(root.val);
 			stack.push(root);
 			root = root.leftTree;
-			while(root==null){	
+			while(root==null){
 				if(stack.empty())return list;
 				root = stack.pop();
-				
 				root = root.rightTree;
-			}	
+			}
 		}
 		return list;
 	}
-
 	
 	public static void main(String [] args){
-
 		TreeNode roots = new TreeNode(9);
 		TreeNode roots1 = new TreeNode(7);
 		TreeNode roots2 = new TreeNode(16);
@@ -52,7 +46,6 @@ public class BinarrySearchTree_Inorder_Iterative {
 		TreeNode roots6 = new TreeNode(18);
 		TreeNode root7 = new TreeNode(19);
 		TreeNode root8 = new TreeNode(20);
-
 		roots.leftTree = roots1;
 		roots.rightTree = roots2;
 		roots1.leftTree = roots3;
@@ -66,5 +59,4 @@ public class BinarrySearchTree_Inorder_Iterative {
 		//System.out.println(inorderTraversal(roots));
 		System.out.println(preorderTraversal(roots));
 	}
-
 }

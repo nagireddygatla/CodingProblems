@@ -7,7 +7,6 @@ public class StringLongestPalindrome {
 		  int palindromeBeginsAt = 0; //index where the longest palindrome begins
 		  int max_len = 1;//length of the longest palindrome
 		  boolean palindrome[][] = new boolean[n][n]; //boolean table to store palindrome truth
-		  
 		  //Trivial case: single letter palindromes
 		  for (int i = 0; i < n; i++) {
 			  palindrome[i][i] = true;
@@ -35,11 +34,22 @@ public class StringLongestPalindrome {
 		      }
 		    }
 		  }
-		  return s.substring(palindromeBeginsAt, max_len + 1);
+
+		  return s.substring(palindromeBeginsAt, palindromeBeginsAt+max_len);
 		}
 
 	public static void main(String args[])
 	{
-		System.out.println(LPS("bananas"));
+		System.out.println(LPS("civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedic"
+				+ "atedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaporti"
+				+ "onofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisal"
+				+ "togetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewec"
+				+ "annothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoor"
+				+ "ponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwha"
+				+ "ttheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehave"
+				+ "thusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthes"
+				+ "ehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatwehe"
+				+ "rehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedoma"
+				+ "ndthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"));
 	}
 }

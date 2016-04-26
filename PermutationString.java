@@ -13,7 +13,7 @@ public class PermutationString {
     }
     
     public List<List<Integer>> allPermute(int [] nums,int k, int len, List<List<Integer>> result){
-        
+
         if(k==len){
             List<Integer> subList = new ArrayList<Integer>();
             for(int i=0;i<nums.length;i++){

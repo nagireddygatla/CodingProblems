@@ -31,10 +31,10 @@ public class Linkedlist_Removeval {
 		 
 		 while(temp.next != null){
 			 if(temp.val == val){
-				 ListNodes dest = temp;
+				// ListNodes dest = temp;
 				 acttemp.next = temp.next;
 				 temp = temp.next;
-				 dest = null;
+				// dest = null;
 			 }
 			 else{
 				 acttemp = temp;

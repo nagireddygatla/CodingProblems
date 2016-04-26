@@ -33,7 +33,9 @@ public class WordBreak {
 	            max = Math.max(max, s1.length());
 	        }
 	        //System.out.println(max);
-	        return wordBreakTopDownOneSolutionUtil(s, wordDict, 0, max, dp);
+	        boolean tep = wordBreakTopDownOneSolutionUtil(s, wordDict, 0, max, dp);
+	        System.out.println(dp);
+	        return tep;
 
 	    }
 	 String result = null;

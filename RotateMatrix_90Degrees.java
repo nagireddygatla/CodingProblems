@@ -1,16 +1,13 @@
 package dataStructures;
 public class RotateMatrix_90Degrees {
-	
 
-	
 	public static int[][] rotate(int[][] matrix, int n) {
-		
+
 		int first = 0;
 		int last = 0;
 		int offset = 0;
 		int top = 0;
 		for(int layer=0;layer<n/2;layer++){
-			
 			first = layer;
 			last = n -1 - layer;
 			for(int i=first;i<last;i++){
@@ -21,10 +18,8 @@ public class RotateMatrix_90Degrees {
 				matrix[last][last-offset] = matrix[i][last];
 				matrix[i][last] = top;
 			}
-			
 		}
 		return matrix;
-		
 		 }
 
 	public static void main(String [] args){

@@ -53,16 +53,18 @@ public class BinaryTreesConcept {
 	
 	public void treeInorderTraversal(Tree focusNode){
 		if(focusNode!=null){
+			
 		treeInorderTraversal(focusNode.leftTree);
-		System.out.println(focusNode.val);
+		System.out.print(focusNode.val+","+" ");
 		treeInorderTraversal(focusNode.rightTree);
 		}
+		
 		
 	}
 	
 	public void treePreorderTraversal(Tree focusNode){
 		if(focusNode!=null){
-			System.out.println(focusNode.val);
+			System.out.print(focusNode.val+","+" ");
 		treePreorderTraversal(focusNode.leftTree);
 		treePreorderTraversal(focusNode.rightTree);
 		}
@@ -119,10 +121,11 @@ public class BinaryTreesConcept {
 		roots6.rightTree = null;
 		BinaryTreesConcept obj = new BinaryTreesConcept(roots);
 		Tree res = obj.insertNodes(15);
-		//obj.treeInorderTraversal(roots);
-		//obj.treePreorderTraversal(roots);
+		obj.treeInorderTraversal(roots);
+		System.out.println();
+		obj.treePreorderTraversal(roots);
 		//obj.treePostorderTraversal(roots);
-		//System.out.println(res.val);
+		System.out.println(res.val);
 
 		System.out.println(obj.findNode(13).val);
 		

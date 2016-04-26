@@ -4,12 +4,8 @@ import java.util.Map.Entry;
 import java.util.*;
 
 //Prove that two trees are identical both in structure and values
-public class BinaryTreeEqual {
-	
+public class BinaryTreeEqual {	
 	TreeNode root;
-
-	
-	
 
 public TreeNode insertNodes(int val){	
 	StringBuilder res = new StringBuilder();

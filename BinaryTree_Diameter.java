@@ -2,19 +2,32 @@ package dataStructures;
 
 public class BinaryTree_Diameter {
 	
-	public static int diameter(TreeNode root){
-		if(root==null)return 0;
-	
-		int submax = Math.max(diameterUtil(root.leftTree), diameterUtil(root.rightTree));
-		submax = Math.max(submax, diameterUtil(root.leftTree)+diameterUtil(root.rightTree));
-		
-		return submax;
-	}
+	public static int diameter(TreeNode root)
+    {
+        /* base case if tree is empty */
+        if (root == null)
+            return 0;
+ 
+        /* get the height of left and right sub trees */
+        int lheight = height(root.leftTree);
+        int rheight = height(root.rightTree);
+ 
+        /* get the diameter of left and right subtrees */
+        int ldiameter = diameter(root.leftTree);
+        int rdiameter = diameter(root.rightTree);
+ 
+        /* Return max of following three
+          1) Diameter of left subtree
+         2) Diameter of right subtree
+         3) Height of left subtree + height of right subtree + 1 */
+        return Math.max(lheight + rheight + 1, Math.max(ldiameter, rdiameter));
+ 
+    }
 
-	private static int diameterUtil(TreeNode root) {
+	private static int height(TreeNode root) {
 	
 		if(root==null)return 0;
-		return 1+Math.max(diameterUtil(root.leftTree),diameterUtil(root.rightTree));
+		return 1+Math.max(height(root.leftTree),height(root.rightTree));
 	}
 	
 	public static void main(String [] args){

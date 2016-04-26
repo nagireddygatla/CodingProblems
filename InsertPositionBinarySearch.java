@@ -20,9 +20,6 @@ public class InsertPositionBinarySearch {
 				else{
 					end=mid;
 				}
-				
-				
-				
 			}
 			if(target<=nums[start])return start;
 			//if(target<=nums[end])return end;

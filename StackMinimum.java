@@ -14,7 +14,6 @@ class StackMinimum extends Stack<Integer> {
         if(s2.isEmpty()){
         s2.push(x);
         return;
-        
         }
         
         if(x<getMin()){

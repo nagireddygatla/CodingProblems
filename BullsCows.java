@@ -1,6 +1,4 @@
 package dataStructures;
-
-
 /*You are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend 
 to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates how many digits in 
 said guess match your secret number exactly in both digit and position (called "bulls") and how many digits match the 
@@ -33,14 +31,12 @@ public class BullsCows {
 	    		
 	    		secArray[secret.charAt(i)-'0']++;
 	    		guessArray[guess.charAt(i)-'0']++;
-	    		//System.out.println(secret.charAt(i)-'0');
-	    		//System.out.println(guess.charAt(i)-'0');
-	    		
+		
 	    	}
 	    	
 	    }
 		for(int i1 = 0;i1<secArray.length;i1++){
-    		System.out.println(i1);
+    		//System.out.println(i1);
     		cows=cows+ Math.min(secArray[i1], guessArray[i1]);
     		//System.out.println(cows);
     		

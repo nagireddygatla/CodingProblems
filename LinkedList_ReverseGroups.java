@@ -12,7 +12,7 @@ public class LinkedList_ReverseGroups {
     public ListNode reverseKGroup(ListNode head, int k) {
         
         if(head==null || head.next==null) return head;
-        if(isValidRev(head,k)==false)return head;
+        if(!isValidRev(head,k))return head;
         
         ListNode curr = head;
         ListNode prev = null,nexus=null;

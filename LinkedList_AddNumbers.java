@@ -45,9 +45,7 @@ public class LinkedList_AddNumbers {
 			 l4.next = new ListNodes(carry);
 			 l4 = l4.next;
 		 }
-		 //System.out.println(l3.next.val);
 			 return l3.next;
-
 	    }
 	 
 	 public static void main(String [] args){

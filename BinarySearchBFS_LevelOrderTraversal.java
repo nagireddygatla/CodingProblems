@@ -3,18 +3,12 @@ import java.util.*;
 	
 public class BinarySearchBFS_LevelOrderTraversal {
 
-	public static void printBST(TreeNode roots){
-		
+	public static void printBST(TreeNode roots){		
 		Queue<TreeNode> queue = new LinkedList<TreeNode>();
 		queue.add(roots);
-		
-		
 			while(!queue.isEmpty()){
-			
 			TreeNode root = queue.poll();
-			
 			System.out.println(root.val);
-			
 			if(root.leftTree != null){
 				queue.add(root.leftTree);
 			}
@@ -36,7 +30,6 @@ public class BinarySearchBFS_LevelOrderTraversal {
 		TreeNode roots6 = new TreeNode(18);
 		TreeNode root7 = new TreeNode(19);
 		TreeNode root8 = new TreeNode(20);
-
 		roots.leftTree = roots1;
 		roots.rightTree = roots2;
 		roots1.leftTree = roots3;
@@ -47,6 +40,6 @@ public class BinarySearchBFS_LevelOrderTraversal {
 		roots6.rightTree = root7;
 		root7.leftTree = null;
 		root7.rightTree = root8;
-		printBST(roots);	
+		printBST(roots);
 	}
 }

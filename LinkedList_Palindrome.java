@@ -1,28 +1,45 @@
 package dataStructures;
 
 
-public class LinkedList_Palindrome {
+
+	public class LinkedList_Palindrome {
 
 	   public boolean isPalindrome(StringNode head) {
 		  
-		   StringNode temp = head;
-		   StringNode fast = head;
+		   if(head==null)return false;
+		   StringNode fast=head;
 		   StringNode slow = head;
-		   
-		   while(fast.next.next!=null){
+		   StringNode lastBef = null;
+		   while(fast!=null && fast.next!=null){
 			   
 			   fast = fast.next.next;
+			   lastBef = slow;
 			   slow = slow.next;
 		   }
+		   lastBef.next = null;
+		   StringNode buff = slow.next;
+		   slow.next = null;
 		   
-		   if(fast.next!=null)
-		   {
-			   fast = fast.next;
+		   while(buff!=null){
+			   
+			   StringNode temp = buff.next;
+			   buff.next = slow;
+			   slow = buff;
+			   buff = temp;
+			   
 		   }
 		   
-		  slow.next = null;
-		  
-			  return false;
+		   StringNode p1 = head;
+		   StringNode p2 = slow;
+		   
+		   		while(p1!=null && p2!=null){
+			   
+			   if(p1.val!=p2.val)return false;
+			   p1 = p1.next;
+			   p2 = p2.next;
+			   
+		   }
+				  return true;
 	    }
 	   
 	public static void main(String [] args){

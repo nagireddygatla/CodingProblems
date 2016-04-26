@@ -11,10 +11,10 @@ class Node{
 	}
 }
 
-public class linkedlist_concept{
+public class Linkedlist_concept{
 
 	Node head;
-	public linkedlist_concept(Node obj){
+	public Linkedlist_concept(Node obj){
 
 		this.head = obj;
 	}
@@ -56,7 +56,7 @@ public class linkedlist_concept{
 		obj1.next  = obj2;
 		obj2.next = obj3;
 		obj3.next = null;
-		linkedlist_concept newobj = new linkedlist_concept(obj1);
+		Linkedlist_concept newobj = new Linkedlist_concept(obj1);
 		Node obj = null;
 		obj = newobj.addnodes(5);
 		obj =newobj.addnodes(20);

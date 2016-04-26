@@ -2,23 +2,37 @@ package dataStructures;
 
 public class BinaryTree_Distance {
 	
-	public int distance(TreeNode root,TreeNode one, TreeNode two){
-		
-		TreeNode lcaNode = LCA(root,one,two);
-		
-		
-		
+	public int findDistance(TreeNode root, int n1, int n2) {
+		int x = Pathlength(root, n1) - 1;
+		int y = Pathlength(root, n2) - 1;
+		int lcaData = findLCA(root, n1, n2).val;
+		int lcaDistance = Pathlength(root, lcaData) - 1;
+		return (x + y) - 2 * lcaDistance;
+	}
+
+	public int Pathlength(TreeNode root, int n1) {
+		if (root != null) {
+			int x = 0;
+			if ((root.val == n1) || (x = Pathlength(root.leftTree, n1)) > 0
+					|| (x = Pathlength(root.rightTree, n1)) > 0) {
+				// System.out.println(root.data);
+				return x + 1;
+			}
+			return 0;
+		}
 		return 0;
 	}
 
-	private TreeNode LCA(TreeNode root,TreeNode one, TreeNode two) {
+	
+
+	private TreeNode findLCA(TreeNode root,int one, int two) {
 	
 		if(root==null)return null;
 		
-		if(one.val==root.val || two.val==root.val)return root;
+		if(one==root.val || two==root.val)return root;
 			
-		TreeNode left = LCA(root.leftTree,one,two);
-		TreeNode right = LCA(root.rightTree,one,two);
+		TreeNode left = findLCA(root.leftTree,one,two);
+		TreeNode right = findLCA(root.rightTree,one,two);
 		
 		if(left!=null && right!=null)return root;
 		

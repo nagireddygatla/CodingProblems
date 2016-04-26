@@ -32,7 +32,7 @@ public class WordLadder {
 						}	
 						chrs[j] = charold;
 					}			
-				}	
+				}
 			}
 			length++;
 		}

@@ -14,7 +14,7 @@ public class BinarySearchTree_SubTree {
 
 	private boolean matchNodes(TreeNode t1, TreeNode t2) {
 		
-		if(t1==null)return true;
+		if(t1==null)return false;
 		
 		if(t1.val == t2.val){
 			

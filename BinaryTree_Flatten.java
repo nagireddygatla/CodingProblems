@@ -28,7 +28,9 @@ public class BinaryTree_Flatten {
 		if(root==null) return null;
 		
 		tail = root;
+		//System.out.println(tail.val);
 		flatten(root.leftTree);
+		//System.out.println(root.val);
 		tail.rightTree = root.rightTree;
 		flatten(root.rightTree);
 		if(root.leftTree != null){
@@ -39,7 +41,6 @@ public class BinaryTree_Flatten {
 	}
 	
 	
-
 	public static void main(String [] args){
 		
 		TreeNode roots = new TreeNode(9);

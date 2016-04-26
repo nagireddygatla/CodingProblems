@@ -23,7 +23,6 @@ public class Solution {
 					}
 				}
 				if(p==0){
-					
 					product.add(charsplit.length * charComp.length);
 				}
 			}

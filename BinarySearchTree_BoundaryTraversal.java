@@ -2,18 +2,34 @@ package dataStructures;
 
 public class BinarySearchTree_BoundaryTraversal {
 
-	public static void boundaryTraversal(TreeNode root){
+	public static void bottomTraversal(TreeNode root){
 		if(root==null)return;
 	
 		
-		boundaryTraversal(root.leftTree);
+		bottomTraversal(root.leftTree);
 		
 		if(root.leftTree==null && root.rightTree==null)System.out.println(root.val);
 		
 		
-		boundaryTraversal(root.rightTree);
+		bottomTraversal(root.rightTree);
 	}
 
+	public static void leftTraversal(TreeNode root){
+		if(root==null)return;
+		if(!(root.leftTree==null && root.rightTree==null))System.out.println(root.val);
+		leftTraversal(root.leftTree);
+		
+		
+	}
+	
+	public static void rightTraversal(TreeNode root){
+		if(root==null)return;
+		
+		rightTraversal(root.rightTree);
+		if(!(root.leftTree==null && root.rightTree==null))System.out.println(root.val);
+		
+		
+	}
 	
 	public static void main(String [] args){
 		TreeNode roots = new TreeNode(9);
@@ -35,8 +51,9 @@ public class BinarySearchTree_BoundaryTraversal {
 		roots6.rightTree = root7;
 		root7.leftTree = null;
 		root7.rightTree = root8;
-		
-		boundaryTraversal(roots);
+		leftTraversal(roots);
+		bottomTraversal(roots);
+		rightTraversal(roots.rightTree);
 		
 		}
 

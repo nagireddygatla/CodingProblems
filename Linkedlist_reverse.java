@@ -37,6 +37,16 @@ public class Linkedlist_reverse {
 		   
 		
 	}
+	public testnode reverserecursion(testnode head){
+		if(head.next==null)return head;
+		
+		testnode rem = reverserecursion(head.next);
+		head.next.next = head;
+		head.next = null;
+		return rem;
+		
+		
+	}
 	
 	public static void main(String [] args){
 		

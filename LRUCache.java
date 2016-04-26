@@ -22,8 +22,6 @@ public class LRUCache {
 			setHead(node);
 			return node.value;
 		}
-		
-		
 		return -1;
 	}
 
@@ -32,6 +30,7 @@ public class LRUCache {
 		node.pre = null;
 		if(head!=null)
 		head.pre = node;
+		
 		head = node;
 		
 		if(end==null)

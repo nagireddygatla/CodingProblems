@@ -1,10 +1,8 @@
 package dataStructures;
 
 public class CountOfSum {
-
 	static int [][] DP;
 	public int countSum(int n,int start){
-
 		if(n==0)
 			return 1;
 

@@ -32,6 +32,28 @@ public class NaryTree {
 		subchild.add(subchild1);
 		subchild.add(subchild2);
 		subchild.add(subchild3);
+		Set<FolderFile> subsubchild = child2.children;
+		FolderFile subsubchild1 = new FolderFile("subsubchild1");
+		FolderFile subsubchild2 = new FolderFile("subsubchild2");
+		FolderFile subsubchild3 = new FolderFile("subsubchild3");
+		subsubchild.add(subsubchild1);
+		subsubchild.add(subsubchild2);
+		subsubchild.add(subsubchild3);
+		Set<FolderFile> thirdchild = child3.children;
+		FolderFile thirdchild1 = new FolderFile("thirdchild1");
+		FolderFile thirdchild2 = new FolderFile("thirdchild2");
+		FolderFile thirdchild3 = new FolderFile("thirdchild3");
+		thirdchild.add(thirdchild1);
+		thirdchild.add(thirdchild2);
+		thirdchild.add(thirdchild3);
+		Set<FolderFile> third3child = child3.children;
+		FolderFile third3child1 = new FolderFile("third3child1");
+		FolderFile third3child2 = new FolderFile("third3child2");
+		FolderFile third3child3 = new FolderFile("third3child3");
+		third3child.add(third3child1);
+		third3child.add(third3child2);
+		third3child.add(third3child3);
+		printChildren(root);
 		
 	}
 
