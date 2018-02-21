@@ -31,6 +31,7 @@ public class ArrayPermutations {
 	                int temp1 = nums[k];
 	                nums[k] = nums[i];
 	                nums[i] = temp1;
+					System.out.println("This is example");
 	                
 	            }
 	            
