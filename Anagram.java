@@ -28,16 +28,16 @@ public class Anagram {
 
 
 	public static void main(String [] args){
-		Scanner reader = new Scanner(System.in);
+		Scanner reader1 = new Scanner(System.in);
 		System.out.println("Enter String 1");
-		String one = reader.next();
+		String one = reader1.next();
 		Scanner reader2 = new Scanner(System.in);
 		System.out.println("Enter String 2");
 		String two = reader2.next();
 		Anagram obj = new Anagram();
 		boolean result = obj.angrms(one, two);
 		System.out.println("It is an Anagram:"+result);
-		reader.close();
+		reader1.close();
 		reader2.close();
 		
 	}
