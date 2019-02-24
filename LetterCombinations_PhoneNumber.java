@@ -6,11 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 public class LetterCombinations_PhoneNumber {
-
-
-		
+	
 		static Map<Character,String> map;
-
+		
 		static{
 		    
 		    map = new HashMap<Character, String>();
@@ -51,5 +49,3 @@ public class LetterCombinations_PhoneNumber {
 		    return list;
 		}
 		}
-
-
